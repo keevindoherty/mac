@@ -1,3 +1,4 @@
+from mac.utils import *
 import numpy as np
 
 import networkx as nx
@@ -9,6 +10,7 @@ class GreedyEig:
         self.num_poses = num_poses
         self.laplacian_e_list = []
         self.weights = []
+        self.edge_list = []
 
         for meas in lc_measurements:
             laplacian_e = weight_graph_lap_from_edge_list([meas], num_poses)
